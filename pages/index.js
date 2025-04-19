@@ -2,41 +2,28 @@ export default function Home() {
   return (
     <div style={styles.container}>
       <header style={styles.header}>
-        <h1 style={styles.name}>Francesco Chiarelli</h1>
+        <h1 style={styles.title}>Francesco Chiarelli</h1>
         <p style={styles.subtitle}>AI Web Consultant</p>
       </header>
-
       <main style={styles.main}>
-        <section style={styles.cardsContainer}>
-          <div style={{ ...styles.card, ...styles.hover }}>
-            <img src="/placeholder1.jpg" alt="Web Design" style={styles.image} />
-            <h3 style={styles.cardTitle}>Web Design</h3>
-            <p style={styles.cardDescription}>
-              Crafting modern and responsive web designs.
-            </p>
-          </div>
-          <div style={{ ...styles.card, ...styles.hover }}>
-            <img src="/placeholder2.jpg" alt="AI & Automation" style={styles.image} />
-            <h3 style={styles.cardTitle}>AI & Automation</h3>
-            <p style={styles.cardDescription}>
-              Integrating AI solutions to automate processes.
-            </p>
-          </div>
-          <div style={{ ...styles.card, ...styles.hover }}>
-            <img src="/placeholder3.jpg" alt="Bubble App" style={styles.image} />
-            <h3 style={styles.cardTitle}>Bubble App</h3>
-            <p style={styles.cardDescription}>
-              Building scalable apps with Bubble.io.
-            </p>
-          </div>
-        </section>
+        <div style={styles.cardContainer}>
+          <Card title="Web Design" imageSrc="https://via.placeholder.com/300x200" />
+          <Card title="AI & Automation" imageSrc="https://via.placeholder.com/300x200" />
+          <Card title="Bubble App" imageSrc="https://via.placeholder.com/300x200" />
+        </div>
       </main>
-
       <footer style={styles.footer}>
-        <p style={styles.footerText}>
-          &copy; {new Date().getFullYear()} Francesco Chiarelli - <a href="mailto:contact@francescochiarelli.com" style={styles.link}>Contact</a>
-        </p>
+        <p>&copy; {new Date().getFullYear()} Francesco Chiarelli. <a href="contact.html" style={styles.link}>Contact</a></p>
       </footer>
+    </div>
+  );
+}
+
+function Card({ title, imageSrc }) {
+  return (
+    <div style={styles.card}>
+      <img src={imageSrc} alt={title} style={styles.cardImage} />
+      <h3 style={styles.cardTitle}>{title}</h3>
     </div>
   );
 }
@@ -44,74 +31,65 @@ export default function Home() {
 const styles = {
   container: {
     fontFamily: 'sans-serif',
+    backgroundColor: '#f9f9f9',
+    color: '#333',
     textAlign: 'center',
-    backgroundColor: '#f5f5f5',
-    padding: '20px',
+    padding: '0 20px',
   },
   header: {
-    marginBottom: '40px',
+    marginTop: '50px',
   },
-  name: {
-    fontSize: '2.5em',
+  title: {
+    fontSize: '2.5rem',
     margin: '0',
   },
   subtitle: {
-    fontSize: '1.2em',
-    color: '#666',
+    fontSize: '1.2rem',
+    color: '#555',
   },
   main: {
-    maxWidth: '800px',
-    margin: '0 auto',
-  },
-  cardsContainer: {
     display: 'flex',
-    justifyContent: 'space-between',
-    flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'column',
+    margin: '50px 0',
+  },
+  cardContainer: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap',
+    maxWidth: '960px',
+    width: '100%',
   },
   card: {
     backgroundColor: '#fff',
-    width: '90%',
-    maxWidth: '250px',
-    margin: '10px 0',
-    padding: '20px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    margin: '10px',
     transition: 'transform 0.3s, box-shadow 0.3s',
+    maxWidth: '300px',
     cursor: 'pointer',
   },
-  hover: {
-    ':hover': {
-      transform: 'scale(1.05) translateY(-10px)',
-      boxShadow: '0 6px 12px rgba(0, 0, 0, 0.15)',
-    },
-  },
-  image: {
+  cardImage: {
     width: '100%',
-    height: '150px',
-    marginBottom: '15px',
-    transition: 'transform 0.3s',
-    ':hover': {
-      transform: 'scale(1.1)',
-    },
+    borderTopLeftRadius: '8px',
+    borderTopRightRadius: '8px',
   },
   cardTitle: {
-    fontSize: '1.5em',
-    margin: '0 0 10px',
+    padding: '15px',
+    margin: '0',
   },
-  cardDescription: {
-    fontSize: '1em',
-    color: '#666',
+  cardHover: {
+    transform: 'scale(1.05)',
+    boxShadow: '0 8px 16px rgba(0,0,0,0.1)',
   },
   footer: {
-    borderTop: '1px solid #ccc',
-    paddingTop: '10px',
-  },
-  footerText: {
-    fontSize: '0.8em',
-    color: '#666',
+    borderTop: '1px solid #ddd',
+    padding: '20px',
+    fontSize: '0.9rem',
   },
   link: {
     color: '#0070f3',
     textDecoration: 'none',
-  },
+  }
 };
