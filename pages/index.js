@@ -1,50 +1,38 @@
 export default function Home() {
-  const currentYear = new Date().getFullYear();
-  
   return (
     <div style={styles.container}>
       <header style={styles.header}>
-        <h1 style={styles.name}>Francesco Chiarelli</h1>
-        <h2 style={styles.subtitle}>AI Web Consultant</h2>
+        <h1 style={styles.title}>Francesco Chiarelli</h1>
+        <p style={styles.subtitle}>AI Web Consultant</p>
       </header>
-      
+
       <main style={styles.main}>
-        <p style={styles.description}>
-          Aiuto le aziende a sfruttare il potenziale del web e dell'intelligenza artificiale per accelerare il proprio business.
-        </p>
-        
-        <div style={styles.services}>
-          <div style={styles.card} className="card">
-            <h3 style={styles.cardTitle}>Web Design</h3>
-            <p style={styles.cardDescription}>
-              Design moderno e funzionale per un'esperienza utente straordinaria.
-            </p>
-          </div>
-          <div style={styles.card} className="card">
-            <h3 style={styles.cardTitle}>AI & Automation</h3>
-            <p style={styles.cardDescription}>
-              Soluzioni personalizzate di intelligenza artificiale e automazione.
-            </p>
-          </div>
-          <div style={styles.card} className="card">
-            <h3 style={styles.cardTitle}>Bubble App</h3>
-            <p style={styles.cardDescription}>
-              Creazione di applicazioni personalizzate senza codice con Bubble.
-            </p>
-          </div>
+        <div style={styles.card} className="card">
+          <h2>Web Design</h2>
+          <p>Creating responsive and modern web designs to enhance user experience.</p>
+        </div>
+        <div style={styles.card} className="card">
+          <h2>AI & Automation</h2>
+          <p>Integrating AI solutions and automation processes into your business model.</p>
+        </div>
+        <div style={styles.card} className="card">
+          <h2>Bubble App</h2>
+          <p>Building no-code apps using Bubble for efficient and scalable solutions.</p>
         </div>
       </main>
-      
+
       <footer style={styles.footer}>
-        <p>© {currentYear} Francesco Chiarelli. All rights reserved.</p>
-        <a href="mailto:info@example.com" style={styles.contactLink}>Contact</a>
+        <p>© {new Date().getFullYear()} Francesco Chiarelli. All rights reserved.</p>
+        <a href="mailto:contact@francescochiarelli.com" style={styles.link}>Contact</a>
       </footer>
 
       <style jsx>{`
-        .card:hover {
-          transform: scale(1.05) translateY(-5px);
-          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        .card {
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+          transform: translateY(-10px) scale(1.05);
+          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
       `}</style>
     </div>
@@ -53,68 +41,53 @@ export default function Home() {
 
 const styles = {
   container: {
-    textAlign: 'center',
     fontFamily: 'sans-serif',
-    backgroundColor: '#f8f9fa',
-    color: '#343a40',
+    backgroundColor: '#f9f9f9',
+    color: '#333',
     minHeight: '100vh',
-    padding: '20px',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   header: {
-    marginBottom: '40px',
+    textAlign: 'center',
+    marginBottom: '50px',
   },
-  name: {
-    fontSize: '2.5em',
+  title: {
+    fontSize: '2.5rem',
     margin: '0',
   },
   subtitle: {
-    fontSize: '1.5em',
-    margin: '10px 0',
-    color: '#6c757d',
+    fontSize: '1.2rem',
+    color: '#555',
   },
   main: {
-    maxWidth: '800px',
-    width: '100%',
-  },
-  description: {
-    fontSize: '1.2em',
-    marginBottom: '40px',
-    color: '#495057',
-  },
-  services: {
     display: 'flex',
     justifyContent: 'space-around',
-    flexWrap: 'wrap',
-    gap: '20px',
+    width: '100%',
+    maxWidth: '900px',
+    marginBottom: '50px',
+    padding: '0 20px',
   },
   card: {
     backgroundColor: '#fff',
     borderRadius: '8px',
     padding: '20px',
-    width: 'calc(33% - 40px)',
-    boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
-    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-  },
-  cardTitle: {
-    fontSize: '1.2em',
-    marginBottom: '10px',
-  },
-  cardDescription: {
-    color: '#6c757d',
+    textAlign: 'center',
+    flex: '1',
+    margin: '0 10px',
+    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
   },
   footer: {
+    textAlign: 'center',
+    padding: '10px 0',
     marginTop: 'auto',
-    paddingTop: '40px',
-    fontSize: '0.9em',
-    color: '#6c757d',
+    width: '100%',
+    borderTop: '1px solid #ddd',
   },
-  contactLink: {
+  link: {
+    color: '#0070f3',
     textDecoration: 'none',
-    color: '#007bff',
-    marginLeft: '10px',
-  },
+  }
 };
