@@ -1,1 +1,3 @@
-export default function Home() { return <h1>AI FC</h1>; }
+export default function Home() {
+  return <h1>Finalmente funziona 🎉</h1>;
+}
