@@ -1,14 +1,1 @@
-import React from "react";
-
-export default function Home() {
-  return (
-    <main style={{ fontFamily: "Arial", padding: "2rem", background: "#f4f4f4" }}>
-      <header style={{ textAlign: "center", marginBottom: "2rem" }}>
-        <h1 style={{ fontSize: "2.5rem", color: "#111" }}>Francesco Chiarelli – AI Webbyrå</h1>
-        <p style={{ fontSize: "1.1rem", color: "#666" }}>
-          Moderne nettsider, AI-løsninger og automatisering.
-        </p>
-      </header>
-    </main>
-  );
-}
+null"|\\n"// pages/index.js"|\\n"import Head from 'next/head';"|\\n""|\\n"export default function Home() {"|\\n"  return ("|\\n"    <>"|\\n"      <Head>"|\\n"        <title>Francesco Chiarelli – AI Web Agency</title>"|\\n"      </Head>"|\\n"      <main style={{ fontFamily: 'Arial, sans-serif', padding: '2rem', maxWidth: '960px', margin: '0 auto' }}>"|\\n"        <header style={{ textAlign: 'center', marginBottom: '2rem' }}>"|\\n"          <h1>Francesco Chiarelli – AI Web Agency</h1>"|\\n"          <p style={{ fontSize: '1.25rem', color: '#555' }}>"|\\n"            Modern websites, AI solutions and automation."|\\n"          </p>"|\\n"        </header>"|\\n""|\\n"        <section style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '3rem' }}>"|\\n"          <div style={{ flex: '1 1 250px', border: '1px solid #ccc', borderRadius: '8px', padding: '1rem' }}>"|\\n"            <h2>Web Design</h2>"|\\n"            <p>Customized, responsive and elegant websites tailored to your brand.</p>"|\\n"          </div>"|\\n"          <div style={{ flex: '1 1 250px', border: '1px solid #ccc', borderRadius: '8px', padding: '1rem' }}>"|\\n"            <h2>AI & Automation</h2>"|\\n"            <p>Integrate AI-powered tools and automate workflows to boost efficiency.</p>"|\\n"          </div>"|\\n"          <div style={{ flex: '1 1 250px', border: '1px solid #ccc', borderRadius: '8px', padding: '1rem' }}>"|\\n"            <h2>Bubble.io Applications</h2>"|\\n"            <p>Build and launch no-code apps quickly using the power of Bubble.io.</p>"|\\n"          </div>"|\\n"        </section>"|\\n""|\\n"        <section style={{ marginBottom: '4rem' }}>"|\\n"          <h2>About Me</h2>"|\\n"          <p>"|\\n"            I'm Francesco Chiarelli, a passionate web designer and AI enthusiast. I help businesses"|\\n"            create smart, modern web experiences by combining design, automation, and the latest"|\\n"            AI technologies."|\\n"          </p>"|\\n"        </section>"|\\n""|\\n"        <footer style={{ textAlign: 'center', borderTop: '1px solid #eee', paddingTop: '1rem', color: '#888' }}>"|\\n"          &copy; {new Date().getFullYear()} Francesco Chiarelli. All rights reserved."|\\n"        </footer>"|\\n"      </main>"|\\n"    </>"|\\n"  );"|\\n"}"|\\n"null
