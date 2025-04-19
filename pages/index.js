@@ -1,119 +1,120 @@
 export default function Home() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <div style={styles.container}>
       <header style={styles.header}>
-        <h1 style={styles.title}>Francesco Chiarelli</h1>
-        <p style={styles.subtitle}>Sviluppatore Web Full-Stack & Designer Minimalista</p>
+        <h1 style={styles.name}>Francesco Chiarelli</h1>
+        <h2 style={styles.subtitle}>AI Web Consultant</h2>
       </header>
+      
       <main style={styles.main}>
-        <h2 style={styles.sectionTitle}>I Servizi</h2>
-        <div style={styles.cardContainer}>
-          <div style={styles.card}>
+        <p style={styles.description}>
+          Aiuto le aziende a sfruttare il potenziale del web e dell'intelligenza artificiale per accelerare il proprio business.
+        </p>
+        
+        <div style={styles.services}>
+          <div style={styles.card} className="card">
             <h3 style={styles.cardTitle}>Web Design</h3>
-            <p style={styles.cardDescription}>Creazione di interfacce utente semplici e coinvolgenti.</p>
+            <p style={styles.cardDescription}>
+              Design moderno e funzionale per un'esperienza utente straordinaria.
+            </p>
           </div>
-          <div style={styles.card}>
-            <h3 style={styles.cardTitle}>E-commerce</h3>
-            <p style={styles.cardDescription}>Soluzioni di e-commerce su misura per la tua attività.</p>
+          <div style={styles.card} className="card">
+            <h3 style={styles.cardTitle}>AI & Automation</h3>
+            <p style={styles.cardDescription}>
+              Soluzioni personalizzate di intelligenza artificiale e automazione.
+            </p>
           </div>
-          <div style={styles.card}>
-            <h3 style={styles.cardTitle}>Sviluppo</h3>
-            <p style={styles.cardDescription}>Codice pulito e scalabile per frontend e backend.</p>
+          <div style={styles.card} className="card">
+            <h3 style={styles.cardTitle}>Bubble App</h3>
+            <p style={styles.cardDescription}>
+              Creazione di applicazioni personalizzate senza codice con Bubble.
+            </p>
           </div>
-        </div>
-        <h2 style={styles.sectionTitle}>Clienti</h2>
-        <div style={styles.photoGrid}>
-          {Array.from({ length: 6 }).map((_, index) => (
-            <div key={index} style={styles.photoPlaceholder}></div>
-          ))}
         </div>
       </main>
+      
       <footer style={styles.footer}>
-        <p style={styles.copyright}>
-          &copy; {new Date().getFullYear()} Francesco Chiarelli. Tutti i diritti riservati.
-        </p>
+        <p>© {currentYear} Francesco Chiarelli. All rights reserved.</p>
+        <a href="mailto:info@example.com" style={styles.contactLink}>Contact</a>
       </footer>
+
+      <style jsx>{`
+        .card:hover {
+          transform: scale(1.05) translateY(-5px);
+          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+      `}</style>
     </div>
   );
 }
 
 const styles = {
   container: {
+    textAlign: 'center',
     fontFamily: 'sans-serif',
-    color: '#333',
-    backgroundColor: '#f5f5f5',
-    margin: 0,
-    padding: 0,
-    lineHeight: 1.6,
+    backgroundColor: '#f8f9fa',
+    color: '#343a40',
+    minHeight: '100vh',
+    padding: '20px',
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100vh',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   header: {
-    padding: '2rem',
-    textAlign: 'center',
+    marginBottom: '40px',
   },
-  title: {
-    margin: 0,
-    fontSize: '2.5rem',
+  name: {
+    fontSize: '2.5em',
+    margin: '0',
   },
   subtitle: {
-    fontSize: '1.25rem',
-    marginTop: '0.5rem',
+    fontSize: '1.5em',
+    margin: '10px 0',
+    color: '#6c757d',
   },
   main: {
-    flex: '1',
-    padding: '2rem',
-    textAlign: 'center',
+    maxWidth: '800px',
+    width: '100%',
   },
-  sectionTitle: {
-    fontSize: '2rem',
-    marginBottom: '1rem',
+  description: {
+    fontSize: '1.2em',
+    marginBottom: '40px',
+    color: '#495057',
   },
-  cardContainer: {
+  services: {
     display: 'flex',
-    justifyContent: 'center',
-    gap: '1rem',
+    justifyContent: 'space-around',
     flexWrap: 'wrap',
+    gap: '20px',
   },
   card: {
     backgroundColor: '#fff',
-    padding: '1rem',
     borderRadius: '8px',
-    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-    width: '300px',
-    margin: '0.5rem',
-    textAlign: 'left',
+    padding: '20px',
+    width: 'calc(33% - 40px)',
+    boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
   },
   cardTitle: {
-    fontSize: '1.5rem',
-    marginBottom: '0.5rem',
+    fontSize: '1.2em',
+    marginBottom: '10px',
   },
   cardDescription: {
-    fontSize: '1rem',
-    margin: 0,
-  },
-  photoGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
-    gap: '10px',
-    marginTop: '1rem',
-  },
-  photoPlaceholder: {
-    width: '100px',
-    height: '100px',
-    backgroundColor: '#ccc',
-    borderRadius: '50%',
+    color: '#6c757d',
   },
   footer: {
-    padding: '1rem',
-    backgroundColor: '#fff',
-    boxShadow: '0 -1px 5px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center',
+    marginTop: 'auto',
+    paddingTop: '40px',
+    fontSize: '0.9em',
+    color: '#6c757d',
   },
-  copyright: {
-    margin: 0,
-    fontSize: '0.875rem',
+  contactLink: {
+    textDecoration: 'none',
+    color: '#007bff',
+    marginLeft: '10px',
   },
 };
