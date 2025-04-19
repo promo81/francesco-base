@@ -2,39 +2,41 @@ export default function Home() {
   return (
     <div style={styles.container}>
       <header style={styles.header}>
-        <h1 style={styles.title}>Francesco Chiarelli</h1>
+        <h1 style={styles.name}>Francesco Chiarelli</h1>
         <p style={styles.subtitle}>AI Web Consultant</p>
       </header>
 
       <main style={styles.main}>
-        <div style={styles.card} className="card">
-          <h2>Web Design</h2>
-          <p>Creating responsive and modern web designs to enhance user experience.</p>
-        </div>
-        <div style={styles.card} className="card">
-          <h2>AI & Automation</h2>
-          <p>Integrating AI solutions and automation processes into your business model.</p>
-        </div>
-        <div style={styles.card} className="card">
-          <h2>Bubble App</h2>
-          <p>Building no-code apps using Bubble for efficient and scalable solutions.</p>
-        </div>
+        <section style={styles.cardsContainer}>
+          <div style={{ ...styles.card, ...styles.hover }}>
+            <img src="/placeholder1.jpg" alt="Web Design" style={styles.image} />
+            <h3 style={styles.cardTitle}>Web Design</h3>
+            <p style={styles.cardDescription}>
+              Crafting modern and responsive web designs.
+            </p>
+          </div>
+          <div style={{ ...styles.card, ...styles.hover }}>
+            <img src="/placeholder2.jpg" alt="AI & Automation" style={styles.image} />
+            <h3 style={styles.cardTitle}>AI & Automation</h3>
+            <p style={styles.cardDescription}>
+              Integrating AI solutions to automate processes.
+            </p>
+          </div>
+          <div style={{ ...styles.card, ...styles.hover }}>
+            <img src="/placeholder3.jpg" alt="Bubble App" style={styles.image} />
+            <h3 style={styles.cardTitle}>Bubble App</h3>
+            <p style={styles.cardDescription}>
+              Building scalable apps with Bubble.io.
+            </p>
+          </div>
+        </section>
       </main>
 
       <footer style={styles.footer}>
-        <p>© {new Date().getFullYear()} Francesco Chiarelli. All rights reserved.</p>
-        <a href="mailto:contact@francescochiarelli.com" style={styles.link}>Contact</a>
+        <p style={styles.footerText}>
+          &copy; {new Date().getFullYear()} Francesco Chiarelli - <a href="mailto:contact@francescochiarelli.com" style={styles.link}>Contact</a>
+        </p>
       </footer>
-
-      <style jsx>{`
-        .card {
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-          transform: translateY(-10px) scale(1.05);
-          box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-      `}</style>
     </div>
   );
 }
@@ -42,52 +44,74 @@ export default function Home() {
 const styles = {
   container: {
     fontFamily: 'sans-serif',
-    backgroundColor: '#f9f9f9',
-    color: '#333',
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
+    textAlign: 'center',
+    backgroundColor: '#f5f5f5',
+    padding: '20px',
   },
   header: {
-    textAlign: 'center',
-    marginBottom: '50px',
+    marginBottom: '40px',
   },
-  title: {
-    fontSize: '2.5rem',
+  name: {
+    fontSize: '2.5em',
     margin: '0',
   },
   subtitle: {
-    fontSize: '1.2rem',
-    color: '#555',
+    fontSize: '1.2em',
+    color: '#666',
   },
   main: {
+    maxWidth: '800px',
+    margin: '0 auto',
+  },
+  cardsContainer: {
     display: 'flex',
-    justifyContent: 'space-around',
-    width: '100%',
-    maxWidth: '900px',
-    marginBottom: '50px',
-    padding: '0 20px',
+    justifyContent: 'space-between',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   card: {
     backgroundColor: '#fff',
-    borderRadius: '8px',
+    width: '90%',
+    maxWidth: '250px',
+    margin: '10px 0',
     padding: '20px',
-    textAlign: 'center',
-    flex: '1',
-    margin: '0 10px',
-    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    transition: 'transform 0.3s, box-shadow 0.3s',
+    cursor: 'pointer',
+  },
+  hover: {
+    ':hover': {
+      transform: 'scale(1.05) translateY(-10px)',
+      boxShadow: '0 6px 12px rgba(0, 0, 0, 0.15)',
+    },
+  },
+  image: {
+    width: '100%',
+    height: '150px',
+    marginBottom: '15px',
+    transition: 'transform 0.3s',
+    ':hover': {
+      transform: 'scale(1.1)',
+    },
+  },
+  cardTitle: {
+    fontSize: '1.5em',
+    margin: '0 0 10px',
+  },
+  cardDescription: {
+    fontSize: '1em',
+    color: '#666',
   },
   footer: {
-    textAlign: 'center',
-    padding: '10px 0',
-    marginTop: 'auto',
-    width: '100%',
-    borderTop: '1px solid #ddd',
+    borderTop: '1px solid #ccc',
+    paddingTop: '10px',
+  },
+  footerText: {
+    fontSize: '0.8em',
+    color: '#666',
   },
   link: {
     color: '#0070f3',
     textDecoration: 'none',
-  }
+  },
 };
