@@ -1,106 +1,32 @@
-```javascript
 export default function Home() {
   return (
-    <>
-      <div className="container">
-        <header>
-          <h1>Francesco Chiarelli</h1>
-          <p className="description">Designer & Developer</p>
-        </header>
-
-        <main>
-          <div className="services">
-            <div className="card">
-              <h2>Web Design</h2>
-              <p>Elegant and modern web designs to bring your ideas to life.</p>
-            </div>
-            <div className="card">
-              <h2>AI & Automation</h2>
-              <p>Cutting-edge solutions for your business processes.</p>
-            </div>
-            <div className="card">
-              <h2>Bubble App</h2>
-              <p>Rapid development of applications with Bubble.io.</p>
-            </div>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans flex flex-col justify-between items-center p-6">
+      <header className="w-full max-w-3xl text-center my-8">
+        <h1 className="text-4xl font-bold mb-2">Francesco Chiarelli</h1>
+        <p className="text-xl font-light">AI Web Consultant</p>
+      </header>
+      <main className="flex flex-col items-center w-full max-w-3xl mb-8">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105">
+            <h3 className="text-2xl font-semibold mb-2">Web Design</h3>
+            <p className="text-sm">Creating elegant designs that convey your brand.</p>
           </div>
-        </main>
-
-        <footer>
-          <p>&copy; {new Date().getFullYear()} Francesco Chiarelli. All rights reserved.</p>
-        </footer>
-      </div>
-      
-      <style jsx global>{`
-        body {
-          margin: 0;
-          font-family: 'Arial', sans-serif;
-          background-color: #f9f9f9;
-          color: #333;
-        }
-
-        .container {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 1rem;
-          text-align: center;
-        }
-
-        header {
-          margin: 2rem 0;
-        }
-
-        h1 {
-          font-size: 2.5rem;
-          margin-bottom: 0.5rem;
-        }
-
-        .description {
-          font-size: 1.25rem;
-          color: #555;
-        }
-
-        .services {
-          display: flex;
-          flex-direction: column;
-          gap: 1.5rem;
-        }
-
-        .card {
-          background: #fff;
-          padding: 1.5rem;
-          border-radius: 8px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        h2 {
-          margin-top: 0;
-          font-size: 1.5rem;
-          color: #222;
-        }
-
-        p {
-          line-height: 1.6;
-        }
-
-        footer {
-          margin-top: 2rem;
-          font-size: 0.875rem;
-          color: #777;
-        }
-
-        @media(min-width: 768px) {
-          .services {
-            flex-direction: row;
-          }
-        }
-      `}</style>
-    </>
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105">
+            <h3 className="text-2xl font-semibold mb-2">AI & Automation</h3>
+            <p className="text-sm">Integrating AI solutions to automate your processes.</p>
+          </div>
+          <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105">
+            <h3 className="text-2xl font-semibold mb-2">Bubble App</h3>
+            <p className="text-sm">Building no-code apps with Bubble for rapid development.</p>
+          </div>
+        </section>
+        <button className="mt-8 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105">
+          Get in Touch
+        </button>
+      </main>
+      <footer className="w-full max-w-3xl text-center py-4">
+        <p className="text-sm">&copy; {new Date().getFullYear()} Francesco Chiarelli. All rights reserved.</p>
+      </footer>
+    </div>
   );
 }
-```
