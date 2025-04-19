@@ -1,95 +1,53 @@
+```javascript
 export default function Home() {
   return (
-    <div style={styles.container}>
-      <header style={styles.header}>
-        <h1 style={styles.title}>Francesco Chiarelli</h1>
-        <p style={styles.subtitle}>AI Web Consultant</p>
+    <div style={{ fontFamily: 'sans-serif', textAlign: 'center', padding: '20px' }}>
+      <header style={{ marginBottom: '50px', animation: 'fadeIn 2s' }}>
+        <h1>Francesco Chiarelli</h1>
+        <p>AI Web Consultant</p>
       </header>
-      <main style={styles.main}>
-        <div style={styles.cardContainer}>
-          <Card title="Web Design" imageSrc="https://via.placeholder.com/300x200" />
-          <Card title="AI & Automation" imageSrc="https://via.placeholder.com/300x200" />
-          <Card title="Bubble App" imageSrc="https://via.placeholder.com/300x200" />
-        </div>
+
+      <main>
+        <section style={{ marginBottom: '50px', animation: 'fadeUp 2s' }}>
+          <h2>Web Design</h2>
+          <img src="https://via.placeholder.com/300x200" alt="Web Design" />
+          <p>Eleganti soluzioni di design web personalizzate per le tue esigenze.</p>
+        </section>
+
+        <section style={{ marginBottom: '50px', animation: 'fadeUp 2s' }}>
+          <h2>AI & Automation</h2>
+          <img src="https://via.placeholder.com/300x200" alt="AI & Automation" />
+          <p>Automatizza i processi con intelligenza artificiale all'avanguardia.</p>
+        </section>
+
+        <section style={{ marginBottom: '50px', animation: 'fadeUp 2s' }}>
+          <h2>Bubble App</h2>
+          <img src="https://via.placeholder.com/300x200" alt="Bubble App" />
+          <p>Crea app potenti senza codice con Bubble.</p>
+        </section>
       </main>
-      <footer style={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} Francesco Chiarelli. <a href="contact.html" style={styles.link}>Contact</a></p>
+
+      <footer style={{ marginTop: '50px', borderTop: '1px solid #ccc', paddingTop: '10px' }}>
+        <p>&copy; {new Date().getFullYear()} Francesco Chiarelli. Tutti i diritti riservati.</p>
       </footer>
     </div>
   );
 }
 
-function Card({ title, imageSrc }) {
-  return (
-    <div style={styles.card}>
-      <img src={imageSrc} alt={title} style={styles.cardImage} />
-      <h3 style={styles.cardTitle}>{title}</h3>
-    </div>
-  );
-}
-
-const styles = {
-  container: {
-    fontFamily: 'sans-serif',
-    backgroundColor: '#f9f9f9',
-    color: '#333',
-    textAlign: 'center',
-    padding: '0 20px',
-  },
-  header: {
-    marginTop: '50px',
-  },
-  title: {
-    fontSize: '2.5rem',
-    margin: '0',
-  },
-  subtitle: {
-    fontSize: '1.2rem',
-    color: '#555',
-  },
-  main: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    margin: '50px 0',
-  },
-  cardContainer: {
-    display: 'flex',
-    justifyContent: 'space-around',
-    flexWrap: 'wrap',
-    maxWidth: '960px',
-    width: '100%',
-  },
-  card: {
-    backgroundColor: '#fff',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-    margin: '10px',
-    transition: 'transform 0.3s, box-shadow 0.3s',
-    maxWidth: '300px',
-    cursor: 'pointer',
-  },
-  cardImage: {
-    width: '100%',
-    borderTopLeftRadius: '8px',
-    borderTopRightRadius: '8px',
-  },
-  cardTitle: {
-    padding: '15px',
-    margin: '0',
-  },
-  cardHover: {
-    transform: 'scale(1.05)',
-    boxShadow: '0 8px 16px rgba(0,0,0,0.1)',
-  },
-  footer: {
-    borderTop: '1px solid #ddd',
-    padding: '20px',
-    fontSize: '0.9rem',
-  },
-  link: {
-    color: '#0070f3',
-    textDecoration: 'none',
+// Add some simple animations via CSS
+<style jsx global>{`
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
-};
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  section {
+    animation-duration: 1.5s;
+  }
+`}</style>
+```
+This code creates a modern, minimalistic, and responsive homepage for a personal website using Next.js. It features a header, sections for services with animations, and a footer with dynamic copyright information. The design prioritizes elegance and simplicity, using CSS animations for added visual appeal.
