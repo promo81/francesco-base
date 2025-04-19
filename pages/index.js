@@ -1,31 +1,36 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans flex flex-col justify-between items-center p-6">
-      <header className="w-full max-w-3xl text-center my-8">
-        <h1 className="text-4xl font-bold mb-2">Francesco Chiarelli</h1>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+      <header className="flex flex-col items-center justify-center text-center py-20 px-6">
+        <h1 className="text-5xl font-extrabold mb-4">Francesco Chiarelli</h1>
         <p className="text-xl font-light">AI Web Consultant</p>
       </header>
-      <main className="flex flex-col items-center w-full max-w-3xl mb-8">
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-          <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105">
-            <h3 className="text-2xl font-semibold mb-2">Web Design</h3>
-            <p className="text-sm">Creating elegant designs that convey your brand.</p>
-          </div>
-          <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105">
-            <h3 className="text-2xl font-semibold mb-2">AI & Automation</h3>
-            <p className="text-sm">Integrating AI solutions to automate your processes.</p>
-          </div>
-          <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transform transition duration-300 hover:scale-105">
-            <h3 className="text-2xl font-semibold mb-2">Bubble App</h3>
-            <p className="text-sm">Building no-code apps with Bubble for rapid development.</p>
-          </div>
+
+      <main className="space-y-24 px-6 max-w-5xl mx-auto">
+        <section className="text-center">
+          <h2 className="text-3xl font-bold mb-4 transition duration-500 hover:text-blue-600">Web Design</h2>
+          <p className="text-lg leading-relaxed">Crafting clean, modern and responsive websites tailored to your brand and goals.</p>
         </section>
-        <button className="mt-8 px-6 py-3 bg-blue-500 text-white font-semibold rounded-full shadow-md transform transition duration-300 hover:bg-blue-600 hover:scale-105">
-          Get in Touch
-        </button>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold mb-4 transition duration-500 hover:text-green-500">AI & Automation</h2>
+          <p className="text-lg leading-relaxed">Implementing smart automation workflows and GPT-powered assistants to boost productivity.</p>
+        </section>
+
+        <section className="text-center">
+          <h2 className="text-3xl font-bold mb-4 transition duration-500 hover:text-purple-500">Bubble App</h2>
+          <p className="text-lg leading-relaxed">Building no-code apps lightning fast with Bubble.io, ready for users and scale.</p>
+        </section>
+
+        <div className="flex justify-center">
+          <button className="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold text-lg shadow-lg hover:bg-blue-700 transform hover:scale-105 transition">
+            Request a Consultation
+          </button>
+        </div>
       </main>
-      <footer className="w-full max-w-3xl text-center py-4">
-        <p className="text-sm">&copy; {new Date().getFullYear()} Francesco Chiarelli. All rights reserved.</p>
+
+      <footer className="mt-32 text-center py-6 border-t border-gray-200 dark:border-gray-700">
+        <p className="text-sm opacity-80">&copy; {new Date().getFullYear()} Francesco Chiarelli. All rights reserved.</p>
       </footer>
     </div>
   );
